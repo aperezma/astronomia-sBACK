@@ -1,20 +1,4 @@
-header{
-    background-color: #11052e;
-    vertical-align: middle;
-    display: inline-flex;
-    justify-content: space-around;
-    width: 100%;
-    color:  #FFE459;
-    -webkit-text-stroke: rgb(176, 181, 255) 5px solid;
-    font-size: 30px;
-    vertical-align: middle;
-    margin-bottom: 0px;
-    margin: 0px;
-}
-header h1 {
-    margin-top: 0.1em;
-    margin-bottom: 1em;
-}
+
 input{
     width: 80%;
 }
@@ -47,6 +31,47 @@ main{
     height: auto;
     margin-left: auto;
 }
+
+header{
+    background-color: #11052e;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    color:  #FFE459;
+    -webkit-text-stroke: rgb(176, 181, 255) 5px solid;
+    font-size: 30px;
+    vertical-align: middle;
+    margin-bottom: 0px;
+}
+.reg-log{
+    font-size: 0.8em;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+
+}
+header a{
+    text-decoration: none;
+}
+.backend{
+    margin: 2.4em;
+    height: auto;
+    display: inline-flex;
+    font-size: 1em;
+    width: 30%;
+    justify-content: space-around;
+}
+.headerensi{
+    vertical-align: middle;
+    vertical-align: middle;
+    display: inline-flex;
+    width: 60%;
+}
+header h1 {
+    margin-top: 1.6em;
+}
 nav{
     background-color: #11052e;
     display: inline-flex;
@@ -67,29 +92,6 @@ nav a {
     transition: background-position-x 0.9s linear;
     text-align: center;
     margin-bottom: 0%;
-}
-
-header a{
-    text-decoration: none;
-    height: 2em;
-}
-header p{
-    margin-top: 0.5em;
-    font-size: 0.5em;
-}
-.backend{
-    padding-top: 10em;
-    height: auto;
-    display: inline-flex;
-    font-size: 1em;
-    width: 30%;
-    justify-content: space-around;
-}
-.headerensi{
-    vertical-align: middle;
-    vertical-align: middle;
-    display: inline-flex;
-    width: 60%;
 }
 .foto{
     width: 100px;
@@ -129,7 +131,7 @@ footer{
     text-decoration: none;    
 }
 
-.menu li {
+  .menu li {
     width: auto;
     height: 50px;
     transition: background-position-x 0.9s linear;
