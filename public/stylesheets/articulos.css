@@ -133,7 +133,7 @@ main{
     color: aliceblue;
     padding-top: 4em;
     padding-bottom: 4em;
-    height: 40em;
+    height: auto;
     margin-left: auto;
 }
 @media(max-width: 800px) {
