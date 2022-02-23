@@ -128,7 +128,7 @@ router.get('/eliminar/:id', async (req, res, next) => {
     var id = req.params.id;
 
 
-    let novedad = await novedadesModel.getNovedadById(id);
+    let novedad = await novedadesModel.getNovedadesById(id);
     if (novedad.img_id) {
         await (destroy(novedad.img_id));
     } //borra la imagen del servidor, no me funciono con getNovedadById pero si con getNovedadesById
