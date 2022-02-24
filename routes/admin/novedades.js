@@ -67,7 +67,7 @@ router.post('/agregar', async (req, res, next) => {
     } catch (error){
         console.log(error);
         res.render('admin/agregar',{
-            layout: 'admin/novedades',
+            layout: 'admin/agregar',
             error: true, message: 'No se cargo la novedad'
         })
     }
@@ -75,7 +75,7 @@ router.post('/agregar', async (req, res, next) => {
 
 router.get('/modificar/:id', async (req, res) => {
     
-    let id = req.params.id;
+    var id = req.params.id;
     
     let novedad = await novedadesModel.getNovedadById(id);
     console.log(novedad)
@@ -86,6 +86,7 @@ router.get('/modificar/:id', async (req, res) => {
 
 });
 router.post('/modificar', async (req, res, next) => {
+    var id = req.params.id;
     try {
         console.log(req.session)
         let img_id = req.body.img_original;
@@ -119,7 +120,7 @@ router.post('/modificar', async (req, res, next) => {
     } catch (error) {
         console.log(error)
         res.render('admin/modificar', {
-            layout: 'admin/layout',
+            layout: 'admin/modificar',
             error: true,
             message: 'No de modifico la Novedad'
         })
@@ -145,3 +146,5 @@ router.get('/eliminar/:id', async (req, res, next) => {
 
 
 module.exports = router;
+
+// deje los layout como los tenia porque por algun motivo no funcionaba bien, pero asi se visualizan correctamente :)

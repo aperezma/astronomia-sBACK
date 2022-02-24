@@ -36,3 +36,7 @@ router.get('/logout', function(req, res, next) {
     layout: 'admin/login',
   });
 });
+
+module.exports = router;
+
+// deje los layout como los tenia porque por algun motivo no funcionaba bien, pero asi se visualizan correctamente :)

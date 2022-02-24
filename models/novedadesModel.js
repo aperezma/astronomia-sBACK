@@ -25,7 +25,7 @@ async function insertNovedad(obj) {
 async function getNovedadById(id){
     var query = "select * from novedades where id = ?";
     var rows = await pool.query(query, [id]);
-    return rows;
+    return rows[0];
 };
 
 async function modificarNovedadById(obj, id){
