@@ -61,7 +61,7 @@ router.post('/agregar', async (req, res, next) => {
         } else {
             res.render('admin/agregar',{
                 layout: 'admin/agregar',
-                erro: true, message: 'Todos los campos son requeridos',
+                error: true, message: 'Todos los campos son requeridos',
             })
         }
     } catch (error){
@@ -74,17 +74,20 @@ router.post('/agregar', async (req, res, next) => {
 });
 
 router.get('/modificar/:id', async (req, res) => {
+    
     let id = req.params.id;
+    
     let novedad = await novedadesModel.getNovedadById(id);
+    console.log(novedad)
     res.render('admin/modificar', {
         layout: 'admin/modificar',
         novedad
-    })
-});
+    });
 
+});
 router.post('/modificar', async (req, res, next) => {
     try {
-
+        console.log(req.session)
         let img_id = req.body.img_original;
         let borrar_img_vieja = false;
 
@@ -102,21 +105,21 @@ router.post('/modificar', async (req, res, next) => {
             await (destroy(req.body.img_original));
         }
 
-        var obj = {
+        let obj = {
+            id: req.body.id,
             titulo: req.body.titulo,
             subtitulo: req.body.subtitulo,
             cuerpo: req.body.cuerpo,
             img_id
         }
         console.log(obj)
-
         await novedadesModel.modificarNovedadById(obj, req.body.id);
         res.redirect('/admin/novedades');
 
     } catch (error) {
         console.log(error)
         res.render('admin/modificar', {
-            layout: 'admmin/layout',
+            layout: 'admin/layout',
             error: true,
             message: 'No de modifico la Novedad'
         })
@@ -128,10 +131,10 @@ router.get('/eliminar/:id', async (req, res, next) => {
     var id = req.params.id;
 
 
-    let novedad = await novedadesModel.getNovedadesById(id);
+    let novedad = await novedadesModel.getNovedadById(id);
     if (novedad.img_id) {
         await (destroy(novedad.img_id));
-    } //borra la imagen del servidor, no me funciono con getNovedadById pero si con getNovedadesById
+    }
 
 
 
