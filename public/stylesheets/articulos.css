@@ -146,6 +146,7 @@ main{
     }
     table{
         width: 100%;
+        padding-left: -2em;
     }
     th{
         width: 100%;
@@ -161,6 +162,8 @@ main{
     main{
         width: 100%;
         height: auto;
+        margin: 0em;
+        padding-left: 0em;
     }
     header h1{
         font-size: 0.8em;
