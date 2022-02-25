@@ -160,7 +160,8 @@ main{
         height: auto;
     }
     main{
-        width: 100%;
+        display: flex;
+        width: auto;
         height: auto;
         margin: 0em;
         padding-left: 0em;
@@ -185,7 +186,7 @@ main{
         width: 100%;
     }
     .container{
-        width:100%;
+        width:auto;
         padding-left: 0em;
     }
 }
