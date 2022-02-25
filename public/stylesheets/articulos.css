@@ -144,6 +144,9 @@ main{
        
         color:  #FFE459;
     }
+    table{
+        width: 100%;
+    }
     .foto{
         padding-top: 0.3em;
         width: 0.9em;
