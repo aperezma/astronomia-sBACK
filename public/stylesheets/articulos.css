@@ -137,6 +137,9 @@ main{
     margin-left: auto;
 }
 @media(max-width: 800px) {
+    body{
+        width: 100%;
+    }
     header{
         background-color: #11052e;
         display: flexbox;
